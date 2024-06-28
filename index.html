@@ -1,1 +1,140 @@
-index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>即時 API 調用與計時器</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .form-group input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group button {
+            padding: 10px;
+            border: none;
+            background: #28a745;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .form-group button:hover {
+            background: #218838;
+        }
+        .todo-list {
+            list-style: none;
+            padding: 0;
+        }
+        .todo-list li {
+            background: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .todo-list li button {
+            background: #dc3545;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .todo-list li button:hover {
+            background: #c82333;
+        }
+    </style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .results {
+            margin-top: 20px;
+        }
+        .timer {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .ok{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>待辦事項列表</h1>
+        <div class="form-group">
+            <input type="text" id="todoInput" placeholder="輸入待辦事項">
+            <button id="addButton">添加</button>
+        </div>
+        <ul class="todo-list" id="todoList"></ul>
+    </div>
+
+
+
+    <div class="container">
+        <h1>即時 API 調用與計時器</h1>
+        <div class="form-group">
+            <label for="inputField">輸入文字</label>
+            <input type="text" id="inputField" placeholder="輸入文字">
+        </div>
+        <span class="timer" id="timer">計時器: 0 毫秒</span>
+        <span id="icon">✔</span>
+        <div class="results">
+            <h2>API 返回結果</h2>
+            <p id="output"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="script2.js"></script>
+</body>
+</html>
